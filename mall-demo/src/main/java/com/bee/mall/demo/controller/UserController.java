@@ -1,5 +1,6 @@
 package com.bee.mall.demo.controller;
 
+import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.bee.mall.demo.entity.User;
 import com.bee.mall.demo.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,8 +23,16 @@ public class UserController {
     @Resource
     private UserService userService;
 
+    @NacosValue("${user.name}")
+    private String userName;
+
+    @NacosValue("${user.age}")
+    private Integer age;
+
     @GetMapping("/getList")
     public List<User> getList() {
+        System.out.printf(userName + ":" + age);
         return userService.selectAll();
     }
+
 }
