@@ -58,9 +58,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.bee.mall.demo.DemoApplication</mainClass>
-                </configuration>
+<!--                <configuration>-->
+<!--                    <mainClass>./GatewayApplication</mainClass>-->
+<!--                </configuration>-->
             </plugin>
         </plugins>
     </build>

@@ -1,5 +1,6 @@
 package com.bee.mall.demo.service.impl;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.bee.mall.demo.entity.User;
 import com.bee.mall.demo.mapper.UserMapper;
 import com.bee.mall.demo.service.UserService;
@@ -21,6 +22,7 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
+    @SentinelResource(value = "selectAll")
     public List<User> selectAll() {
         return userMapper.selectAll();
     }

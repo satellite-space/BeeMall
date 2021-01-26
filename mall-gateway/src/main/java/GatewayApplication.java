@@ -1,21 +1,17 @@
-package com.bee.mall.demo;
-
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
- * description: 启动类 <br>
- * date: 2021/1/21 19:58 <br>
+ * description: xxxx <br>
+ * date: 2021/1/26 21:35 <br>
  * author: Administrator
  * version: 1.0 <br>
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan("com.bee.mall.demo.mapper")
-public class DemoApplication {
+public class GatewayApplication {
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(GatewayApplication.class, args);
     }
 }
