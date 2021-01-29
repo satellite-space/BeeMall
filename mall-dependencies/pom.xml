@@ -15,6 +15,7 @@
 
         <nacos-boot.version>0.2.1</nacos-boot.version>
 
+        <rocketmq.version>4.3.2</rocketmq.version>
         <hikaricp.version>3.4.5</hikaricp.version>
         <mybatis-plus.version>3.4.2</mybatis-plus.version>
         <mysql-connector.version>8.0.23</mysql-connector.version>
@@ -45,6 +46,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
                 <scope>test</scope>
+            </dependency>
+
+            <!-- rocketmq -->
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-client</artifactId>
+                <version>${rocketmq.version}</version>
             </dependency>
 
             <!-- datasource -->

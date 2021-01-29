@@ -2,8 +2,11 @@ package com.bee.mall.demo.controller;
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.bee.mall.demo.entity.User;
+import com.bee.mall.demo.rocketmq.Consumer;
+import com.bee.mall.demo.rocketmq.Producer;
 import com.bee.mall.demo.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,6 +26,12 @@ public class UserController {
     @Resource
     private UserService userService;
 
+    @Resource
+    private Producer producer;
+
+    @Resource
+    private Consumer consumer;
+
     @NacosValue("${user.name}")
     private String userName;
 
@@ -33,6 +42,12 @@ public class UserController {
     public List<User> getList() {
         System.out.printf(userName + ":" + age);
         return userService.selectAll();
+    }
+
+    @GetMapping("/mq/{msg}")
+    public void mq(@PathVariable("msg") String msg) {
+        producer.producer(msg);
+        consumer.consumer();
     }
 
 }
