@@ -2,9 +2,11 @@ package com.bee.mall.demo.controller;
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.bee.mall.demo.entity.User;
+import com.bee.mall.demo.provider.api.EchoService;
 import com.bee.mall.demo.rocketmq.Consumer;
 import com.bee.mall.demo.rocketmq.Producer;
 import com.bee.mall.demo.service.UserService;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +34,9 @@ public class UserController {
     @Resource
     private Consumer consumer;
 
+    @DubboReference
+    private EchoService echoService;
+
     @NacosValue("${user.name}")
     private String userName;
 
@@ -48,6 +53,11 @@ public class UserController {
     public void mq(@PathVariable("msg") String msg) {
         producer.producer(msg);
         consumer.consumer();
+    }
+
+    @GetMapping("/echo/{msg}")
+    public String echo(@PathVariable("msg") String msg) {
+        return echoService.echo(msg);
     }
 
 }
