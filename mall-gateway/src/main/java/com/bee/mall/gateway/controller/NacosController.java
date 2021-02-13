@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * description: xxxx <br>
+ * description: 测试nacos <br>
  * date: 2021/1/26 21:37 <br>
  * author: Administrator
  * version: 1.0 <br>

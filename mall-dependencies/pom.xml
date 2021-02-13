@@ -79,6 +79,13 @@
                 <version>${mysql-connector.version}</version>
             </dependency>
 
+            <!-- swagger -->
+            <dependency>
+                <groupId>com.spring4all</groupId>
+                <artifactId>swagger-spring-boot-starter</artifactId>
+                <version>1.9.1.RELEASE</version>
+            </dependency>
+
             <!-- commons -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
