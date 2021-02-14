@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * description: xxxx <br>
+ * description: gateway启动类 <br>
  * date: 2021/1/26 21:35 <br>
  * author: Administrator
  * version: 1.0 <br>

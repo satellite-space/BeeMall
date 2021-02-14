@@ -17,6 +17,7 @@
         <mybatis-plus.version>3.4.2</mybatis-plus.version>
         <mysql-connector.version>8.0.23</mysql-connector.version>
 
+        <swagger.version>1.9.1.RELEASE</swagger.version>
         <commons-lang3.veriosn>3.11</commons-lang3.veriosn>
     </properties>
 
@@ -83,7 +84,7 @@
             <dependency>
                 <groupId>com.spring4all</groupId>
                 <artifactId>swagger-spring-boot-starter</artifactId>
-                <version>1.9.1.RELEASE</version>
+                <version>${swagger.version}</version>
             </dependency>
 
             <!-- commons -->
