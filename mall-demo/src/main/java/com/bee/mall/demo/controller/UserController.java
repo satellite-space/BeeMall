@@ -6,6 +6,7 @@ import com.bee.mall.demo.provider.api.EchoService;
 import com.bee.mall.demo.rocketmq.Consumer;
 import com.bee.mall.demo.rocketmq.Producer;
 import com.bee.mall.demo.service.UserService;
+import io.swagger.annotations.Api;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,7 @@ import java.util.List;
  * author: Administrator
  * version: 1.0 <br>
  */
+@Api("/user")
 @RestController
 @RequestMapping("/user")
 public class UserController {

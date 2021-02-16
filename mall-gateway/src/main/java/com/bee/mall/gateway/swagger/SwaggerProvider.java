@@ -1,4 +1,4 @@
-package com.bee.mall.gateway.swagger2;
+package com.bee.mall.gateway.swagger;
 
 import org.springframework.cloud.gateway.config.GatewayProperties;
 import org.springframework.cloud.gateway.route.RouteLocator;
@@ -20,7 +20,7 @@ import java.util.List;
 @Primary
 public class SwaggerProvider implements SwaggerResourcesProvider {
 
-    public static final String API_URI = "v2/api-docs";
+    public static final String API_URI = "/v3/api-docs";
     private final RouteLocator routeLocator;
     private final GatewayProperties gatewayProperties;
 

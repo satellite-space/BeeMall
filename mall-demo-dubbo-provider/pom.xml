@@ -34,5 +34,11 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+
+        <!-- 此处使用这个包的原因之一为规避项目启动时，dubbo找不到StringUtils的方法，官方已经于2021/1/19修复这个问题，可能将于dubbo2.7.9中发布-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
     </dependencies>
 </project>
