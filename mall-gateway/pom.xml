@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>gateway</artifactId>
+    <packaging>jar</packaging>
     <description>gateway for project</description>
 
     <dependencies>

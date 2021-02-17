@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>demo</artifactId>
+    <packaging>jar</packaging>
     <description>demo for project</description>
 
     <dependencies>

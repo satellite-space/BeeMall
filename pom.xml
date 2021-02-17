@@ -17,7 +17,10 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>mall-demo</module>
+        <module>mall-demo-dubbo-provider</module>
         <module>mall-dependencies</module>
+        <module>mall-gateway</module>
     </modules>
 
     <properties>
