@@ -15,6 +15,7 @@
         <rocketmq.version>4.3.2</rocketmq.version>
         <hikaricp.version>3.4.5</hikaricp.version>
         <mybatis-plus.version>3.4.2</mybatis-plus.version>
+        <mybatis-generator.version>1.4.0</mybatis-generator.version>
         <mysql-connector.version>8.0.23</mysql-connector.version>
 
         <swagger.version>3.0.0</swagger.version>
@@ -79,6 +80,12 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql-connector.version}</version>
+            </dependency>
+            <!-- mybatis generator -->
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>${mybatis-generator.version}</version>
             </dependency>
 
             <!-- swagger -->
